@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom/client'
 import { HashRouter } from 'react-router-dom'
 import App from './App.jsx'
 
-// Bootstrap y estilos globales
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './styles/main.scss'
 
