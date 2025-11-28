@@ -3,6 +3,46 @@
 @use "sass:color"; 
 
 // ==========================================
+// BANNER HERO
+// ==========================================
+.banner {
+  width: 100%;
+  height: 35vh;
+  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../assets/img/vista-superior-de-granos-de-cafe-con-accesorios.webp') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $light-color; 
+  margin-bottom: 5rem;
+  position: relative;
+
+  .content-banner {
+    max-width: 800px;
+    padding: 2rem;
+    z-index: 2;
+
+    p {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    h2 {
+      font-size: 5rem;
+      margin-bottom: 3rem;
+      line-height: 1.2;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      
+      @include phone {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+// ==========================================
 // BOTONES
 // ==========================================
 
@@ -1295,9 +1335,9 @@
     }
 }
 
-.category-moca { background: url('../img/cafe-irish.webp') center/cover; }
-.category-capuchino { background: url('../img/primer-plano-de-cafe-capuchino-con-latte-de-arte-en-la-mesa-de-madera.webp') center/cover; }
-.category-expreso { background: url('../img/dos-tazas-de-cafe-expres-debajo-de-la-cafetera.webp') center/cover; }
+.category-moca { background: url('../assets/img/cafe-irish.webp') center/cover; }
+.category-capuchino { background: url('../assets/img/primer-plano-de-cafe-capuchino-con-latte-de-arte-en-la-mesa-de-madera.webp') center/cover; }
+.category-expreso { background: url('../assets/img/dos-tazas-de-cafe-expres-debajo-de-la-cafetera.webp') center/cover; }
 
 // Galería (Carrusel)
 #galleryCarousel {

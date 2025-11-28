@@ -4,6 +4,7 @@ import { useCart } from '../../context/CartContext'
 import { useTheme } from '../../context/ThemeContext'
 import { useSearch } from '../../hooks/useSearch'
 import { motion, AnimatePresence } from 'framer-motion'
+import logo from '../../assets/img/gatosgoldoscafelogo.png'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -40,7 +41,7 @@ const Header = () => {
 
           <div className="container-logo">
             <img 
-              src="/img/gatosgoldoscafelogo.png" 
+              src={logo} 
               alt="Milodón Coffee Roasters" 
               className="logo-img" 
             />

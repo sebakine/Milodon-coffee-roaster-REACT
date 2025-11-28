@@ -2,6 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import RevealOnScroll from '../components/common/RevealOnScroll';
 
+// Import Images
+import imgDestacado from '../assets/img/cafe-oscuro-en-un-tazon-sobre-una-mesa-marron.webp';
+import imgMovil from '../assets/img/cafeteria-movil.webp';
+import imgMembresia from '../assets/img/manos-sosteniendo-sacos-y-granos-de-cafe.webp';
+import imgMetodos from '../assets/img/taza-de-cafe-con-leche.webp';
+import imgOrigenes from '../assets/img/primer-plano-de-manos-barista-hacer-cafe-con-leche-arte-pintura.webp';
+
 const Blog = () => {
   return (
     <>
@@ -22,7 +29,7 @@ const Blog = () => {
                 {/* Artículo Destacado */}
                 <article className="card-articulo-destacado mb-5">
                   <div className="container-img">
-                    <img src="/img/cafe-oscuro-en-un-tazon-sobre-una-mesa-marron.webp" alt="Arte del Tostado Artesanal" className="img-fluid" loading="eager" decoding="async" />
+                    <img src={imgDestacado} alt="Arte del Tostado Artesanal" className="img-fluid" loading="eager" decoding="async" />
                     <div className="badge-destacado">Destacado</div>
                   </div>
                   <div className="content-articulo">
@@ -33,8 +40,8 @@ const Blog = () => {
                     </p>
                     <div className="meta-articulo">
                       <span className="autor"><i className="fa-regular fa-user"></i> Por Carlos Mendoza</span>
-                      <span className="categoria"><i class="fa-regular fa-folder"></i> Procesos</span>
-                      <span className="tiempo-lectura"><i class="fa-regular fa-clock"></i> 5 min lectura</span>
+                      <span className="categoria"><i className="fa-regular fa-folder"></i> Procesos</span>
+                      <span className="tiempo-lectura"><i className="fa-regular fa-clock"></i> 5 min lectura</span>
                     </div>
                     <a href="#" className="btn-leer-mas gradient-button"><span className="gradient-text">Leer Artículo Completo</span></a>
                   </div>
@@ -45,7 +52,7 @@ const Blog = () => {
                   <div className="col-md-6 mb-4">
                     <article className="card-articulo">
                       <div className="container-img">
-                        <img src="/img/cafeteria-movil.webp" alt="Barra Móvil para Eventos" className="img-fluid" loading="lazy" decoding="async" />
+                        <img src={imgMovil} alt="Barra Móvil para Eventos" className="img-fluid" loading="lazy" decoding="async" />
                       </div>
                       <div className="content-articulo">
                         <span className="fecha-articulo">10 Enero 2024</span>
@@ -59,7 +66,7 @@ const Blog = () => {
                   <div className="col-md-6 mb-4">
                     <article className="card-articulo">
                       <div className="container-img">
-                        <img src="/img/manos-sosteniendo-sacos-y-granos-de-cafe.webp" alt="Club de Membresías" className="img-fluid" loading="lazy" decoding="async" />
+                        <img src={imgMembresia} alt="Club de Membresías" className="img-fluid" loading="lazy" decoding="async" />
                       </div>
                       <div className="content-articulo">
                         <span className="fecha-articulo">5 Enero 2024</span>
@@ -73,7 +80,7 @@ const Blog = () => {
                   <div className="col-md-6 mb-4">
                     <article className="card-articulo">
                       <div className="container-img">
-                        <img src="/img/taza-de-cafe-con-leche.webp" alt="Métodos de Preparación" className="img-fluid" loading="lazy" decoding="async" />
+                        <img src={imgMetodos} alt="Métodos de Preparación" className="img-fluid" loading="lazy" decoding="async" />
                       </div>
                       <div className="content-articulo">
                         <span className="fecha-articulo">28 Diciembre 2023</span>
@@ -87,7 +94,7 @@ const Blog = () => {
                   <div className="col-md-6 mb-4">
                     <article className="card-articulo">
                       <div className="container-img">
-                        <img src="/img/primer-plano-de-manos-barista-hacer-cafe-con-leche-arte-pintura.webp" alt="Orígenes del Café" className="img-fluid" loading="lazy" decoding="async" />
+                        <img src={imgOrigenes} alt="Orígenes del Café" className="img-fluid" loading="lazy" decoding="async" />
                       </div>
                       <div className="content-articulo">
                         <span className="fecha-articulo">20 Diciembre 2023</span>

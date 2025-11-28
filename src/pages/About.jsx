@@ -1,6 +1,12 @@
 import React from 'react';
 import RevealOnScroll from '../components/common/RevealOnScroll';
 
+// Import Images
+import imgHistoria from '../assets/img/coffee-business-concept-closeup-lady-barista-en-delantal-preparando-y-vertiendo-leche-en-una-taza-caliente-mientras-esta-de-pie-en-el-cafe.webp';
+import imgFounder from '../assets/img/barista-en-la-marca-de-la-cara-en-la-cafeteria-en-new-normal.webp';
+import imgBarista from '../assets/img/coffee-business-concept-closeup-lady-barista-en-delantal-preparando-y-vertiendo-leche-en-una-taza-caliente-mientras-esta-de-pie-en-el-cafe.webp';
+import imgManager from '../assets/img/logosalem-miauricio.png';
+
 const About = () => {
   return (
     <>
@@ -55,7 +61,7 @@ const About = () => {
               </div>
               <div className="col-lg-6">
                 <div className="imagen-historia">
-                  <img src="/img/coffee-business-concept-closeup-lady-barista-en-delantal-preparando-y-vertiendo-leche-en-una-taza-caliente-mientras-esta-de-pie-en-el-cafe.webp" alt="Nuestra tostaduría" className="img-fluid rounded" loading="lazy" decoding="async" />
+                  <img src={imgHistoria} alt="Nuestra tostaduría" className="img-fluid rounded" loading="lazy" decoding="async" />
                 </div>
               </div>
             </div>
@@ -128,7 +134,7 @@ const About = () => {
             <div className="row">
               <div className="col-md-4">
                 <div className="card-miembro text-center">
-                  <img src="/img/barista-en-la-marca-de-la-cara-en-la-cafeteria-en-new-normal.webp" alt="Fundador" className="img-fluid rounded-circle" loading="lazy" decoding="async" />
+                  <img src={imgFounder} alt="Fundador" className="img-fluid rounded-circle" loading="lazy" decoding="async" />
                   <h4>Sebastián Muñoz Rivera</h4>
                   <p className="cargo">Fundador & Tostador Maestro</p>
                   <p>+10 años de experiencia en café de especialidad</p>
@@ -136,7 +142,7 @@ const About = () => {
               </div>
               <div className="col-md-4">
                 <div className="card-miembro text-center">
-                  <img src="/img/coffee-business-concept-closeup-lady-barista-en-delantal-preparando-y-vertiendo-leche-en-una-taza-caliente-mientras-esta-de-pie-en-el-cafe.webp" alt="Barista" className="img-fluid rounded-circle" loading="lazy" decoding="async" />
+                  <img src={imgBarista} alt="Barista" className="img-fluid rounded-circle" loading="lazy" decoding="async" />
                   <h4>Ma José Astudillo</h4>
                   <p className="cargo">Barista Principal</p>
                   <p>Campeona regional de barismo 2022</p>
@@ -144,7 +150,7 @@ const About = () => {
               </div>
               <div className="col-md-4">
                 <div className="card-miembro text-center">
-                  <img src="/img/logosalem-miauricio.png" alt="Gerente" className="img-fluid rounded-circle" loading="lazy" decoding="async" />
+                  <img src={imgManager} alt="Gerente" className="img-fluid rounded-circle" loading="lazy" decoding="async" />
                   <h4>Don Miauricio y Salem</h4>
                   <p className="cargo">Gerente de Operaciones Gato Goldo y Salem</p>
                   <p>Especialista en eventos, comida y catering</p>

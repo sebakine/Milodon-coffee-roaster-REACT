@@ -5,6 +5,13 @@ import QuickViewModal from '../components/products/QuickViewModal';
 import RevealOnScroll from '../components/common/RevealOnScroll';
 import { useProducts } from '../hooks/useProducts';
 
+// Import Carousel Images
+import carousel1 from '../assets/img/vista-superior-de-granos-de-cafe-con-accesorios.webp';
+import carousel2 from '../assets/img/vista-superior-de-accesorios-de-cafe-sobre-la-mesa.webp';
+import carousel3 from '../assets/img/el-barista-diligente-esta-preparando-un-cafe-con-leche-fresco-para-los-clientes-para-tomar-un-cafe-en-la-cafeteria.webp';
+import carousel4 from '../assets/img/taza-de-cafe-con-leche.webp';
+import carousel5 from '../assets/img/cafe-oscuro-en-un-tazon-sobre-una-mesa-marron.webp';
+
 const Home = () => {
   const { products } = useProducts();
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -112,19 +119,19 @@ const Home = () => {
             </div>
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img src="/img/vista-superior-de-granos-de-cafe-con-accesorios.webp" className="d-block w-100" alt="Vista cenital de granos de café tostado" loading="eager" decoding="async" />
+                <img src={carousel1} className="d-block w-100" alt="Vista cenital de granos de café tostado" loading="eager" decoding="async" />
               </div>
               <div className="carousel-item">
-                <img src="/img/vista-superior-de-accesorios-de-cafe-sobre-la-mesa.webp" className="d-block w-100" alt="Accesorios para preparar café" loading="lazy" decoding="async" />
+                <img src={carousel2} className="d-block w-100" alt="Accesorios para preparar café" loading="lazy" decoding="async" />
               </div>
               <div className="carousel-item">
-                <img src="/img/el-barista-diligente-esta-preparando-un-cafe-con-leche-fresco-para-los-clientes-para-tomar-un-cafe-en-la-cafeteria.webp" className="d-block w-100" alt="Barista vertiendo leche" loading="lazy" decoding="async" />
+                <img src={carousel3} className="d-block w-100" alt="Barista vertiendo leche" loading="lazy" decoding="async" />
               </div>
               <div className="carousel-item">
-                <img src="/img/taza-de-cafe-con-leche.webp" className="d-block w-100" alt="Taza de café con leche" loading="lazy" decoding="async" />
+                <img src={carousel4} className="d-block w-100" alt="Taza de café con leche" loading="lazy" decoding="async" />
               </div>
               <div className="carousel-item">
-                <img src="/img/cafe-oscuro-en-un-tazon-sobre-una-mesa-marron.webp" className="d-block w-100" alt="Tazón de granos de café" loading="lazy" decoding="async" />
+                <img src={carousel5} className="d-block w-100" alt="Tazón de granos de café" loading="lazy" decoding="async" />
               </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">

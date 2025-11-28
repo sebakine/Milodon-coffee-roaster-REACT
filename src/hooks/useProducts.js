@@ -1,5 +1,11 @@
 import { useState, useEffect } from 'react'
 
+import cafeIrish from '../assets/img/cafe-irish.webp'
+import cafeExpres from '../assets/img/dos-tazas-de-cafe-expres-debajo-de-la-cafetera.webp'
+import cafeLatte from '../assets/img/primer-plano-de-barista-haciendo-arte-latte.webp'
+import cafeCapuchino from '../assets/img/primer-plano-de-cafe-capuchino-con-latte-de-arte-en-la-mesa-de-madera.webp'
+import cafeViena from '../assets/img/concepto-de-servicio-de-preparacion-de-cafe-barista-cafe.webp'
+
 export const useProducts = () => {
   const [products, setProducts] = useState([])
   const [filteredProducts, setFilteredProducts] = useState([])
@@ -11,7 +17,7 @@ export const useProducts = () => {
       name: "Café Irish Blend",
       price: 12500,
       originalPrice: 14700,
-      image: "/img/cafe-irish.webp",
+      image: cafeIrish,
       discount: 15,
       badges: ["Nuevo", "Oferta"],
       rating: 4,
@@ -24,7 +30,7 @@ export const useProducts = () => {
       name: "Café English Roast",
       price: 13200,
       originalPrice: 16500,
-      image: "/img/dos-tazas-de-cafe-expres-debajo-de-la-cafetera.webp",
+      image: cafeExpres,
       discount: 20,
       badges: ["Destacado"],
       rating: 3,
@@ -37,7 +43,7 @@ export const useProducts = () => {
       name: "Café Australian Blend",
       price: 15800,
       originalPrice: null,
-      image: "/img/primer-plano-de-barista-haciendo-arte-latte.webp",
+      image: cafeLatte,
       discount: 0,
       badges: ["Más Vendido"],
       rating: 5,
@@ -50,7 +56,7 @@ export const useProducts = () => {
       name: "Café Cold Brew",
       price: 9900,
       originalPrice: null,
-      image: "/img/primer-plano-de-cafe-capuchino-con-latte-de-arte-en-la-mesa-de-madera.webp",
+      image: cafeCapuchino,
       discount: 0,
       badges: ["Popular"],
       rating: 4,
@@ -63,7 +69,7 @@ export const useProducts = () => {
       name: "Café Viena Style",
       price: 14500,
       originalPrice: 20700,
-      image: "/img/concepto-de-servicio-de-preparacion-de-cafe-barista-cafe.webp",
+      image: cafeViena,
       discount: 30,
       badges: ["Mejor Oferta"],
       rating: 5,
@@ -76,7 +82,7 @@ export const useProducts = () => {
       name: "Café Liqueurs",
       price: 16800,
       originalPrice: null,
-      image: "/img/primer-plano-de-cafe-capuchino-con-latte-de-arte-en-la-mesa-de-madera.webp",
+      image: cafeCapuchino, // Reusing capuchino as in original
       discount: 0,
       badges: ["Popular"],
       rating: 4,
