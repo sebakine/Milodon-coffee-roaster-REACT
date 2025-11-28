@@ -22,10 +22,44 @@ const About = lazy(() => import('./pages/About'));
 const Blog = lazy(() => import('./pages/Blog'));
 const Contact = lazy(() => import('./pages/Contact'));
 
+// Componente interno para manejar la lógica de rutas y animaciones
+// (Necesario porque useLocation no funciona dentro del componente que declara el Router)
+const AppRoutes = () => {
+  const location = useLocation();
+
+  return (
+    <Suspense fallback={<LoadingSpinner />}>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={
+            <PageTransition>
+              <Home />
+            </PageTransition>
+          } />
+          <Route path="/about" element={
+            <PageTransition>
+              <About />
+            </PageTransition>
+          } />
+          <Route path="/blog" element={
+            <PageTransition>
+              <Blog />
+            </PageTransition>
+          } />
+          <Route path="/contact" element={
+            <PageTransition>
+              <Contact />
+            </PageTransition>
+          } />
+        </Routes>
+      </AnimatePresence>
+    </Suspense>
+  );
+};
+
 function App() {
   // 1. Estado para controlar si mostramos al gato o la web
   const [loading, setLoading] = useState(true);
-  const location = useLocation();
 
   // 2. Efecto que espera 2.5 segundos y luego quita la carga
   useEffect(() => {
@@ -46,43 +80,19 @@ function App() {
         <ThemeProvider>
           <CartProvider>
             <ErrorBoundary>
-              <div className="App">
-                <Header />
-                
-                <main>
-                  <Suspense fallback={<LoadingSpinner />}>
-                    <AnimatePresence mode="wait">
-                      <Routes location={location} key={location.pathname}>
-                        <Route path="/" element={
-                          <PageTransition>
-                            <Home />
-                          </PageTransition>
-                        } />
-                        <Route path="/about" element={
-                          <PageTransition>
-                            <About />
-                          </PageTransition>
-                        } />
-                        <Route path="/blog" element={
-                          <PageTransition>
-                            <Blog />
-                          </PageTransition>
-                        } />
-                        <Route path="/contact" element={
-                          <PageTransition>
-                            <Contact />
-                          </PageTransition>
-                        } />
-                      </Routes>
-                    </AnimatePresence>
-                  </Suspense>
-                </main>
+              {/* CAMBIO: Usamos HashRouter para compatibilidad con GitHub Pages */}
+                <div className="App">
+                  <Header />
+                  
+                  <main>
+                    <AppRoutes />
+                  </main>
 
-                {/* Componentes globales que no son páginas */}
-                <CartOffcanvas />
-                <ScrollToTopButton />
-                <Footer />
-              </div>
+                  {/* Componentes globales que no son páginas */}
+                  <CartOffcanvas />
+                  <ScrollToTopButton />
+                  <Footer />
+                </div>
             </ErrorBoundary>
           </CartProvider>
         </ThemeProvider>
