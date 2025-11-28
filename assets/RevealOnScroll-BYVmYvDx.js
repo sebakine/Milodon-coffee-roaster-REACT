@@ -1,0 +1,1 @@
+import{j as i,m as o}from"./vendor-BlDt-0DT.js";const s=({children:e,delay:t=0,width:n="100%"})=>i.jsx("div",{style:{width:n,overflow:"hidden"},children:i.jsx(o.div,{variants:{hidden:{opacity:0,y:75},visible:{opacity:1,y:0}},initial:"hidden",whileInView:"visible",viewport:{once:!0,margin:"-100px"},transition:{duration:.6,delay:t,ease:"easeOut"},children:e})});export{s as R};
