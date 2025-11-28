@@ -1,0 +1,11 @@
+// src/styles/main.scss
+
+// 1. Importar Bootstrap COMPLETO primero
+@use "bootstrap/scss/bootstrap";
+
+// 2. Luego tus archivos
+@use './variables' as *;
+@use './mixins'    as *;
+@use './base';
+@use './layout';
+@use './components';
